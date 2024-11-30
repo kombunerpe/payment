@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/app/css/style.css">
+    <link rel="stylesheet" href="assets/app/css/main.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+    <script src="assets/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/3b4957157c.js" crossorigin="anonymous"></script> -->
+
+    <title>Payment Dana</title>
+    <style>
+        .payment-method-logo {
+    width: 300px;
+    height: 98px;
+    padding: 8px;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    margin-right: 12px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+.payment-method-countainer {
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+<?php foreach ($products as $product): ?>
+    <div class="wrap py-3">
+        <div class="container-lg">
+            <div class="d-flex justify-content-between mb-2">
+                <h2>
+                    Pembayaran
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-7">
+
+                    <div class="callout callout-info bg-white py-2 my-3">
+                        <p class="lead mb-0">
+                            <span class="text-secondary">Total Pembayaran: BEBAS GAN</span>
+                        </p>
+                    </div>
+
+                    <div class="jumbotron py-3 mb-3 bg-red text-center shadow-sm">
+                        <h6 class="text-light">Nomor Rek</h6>
+                        <h3 class="text-monospace text-white">1380022095942</h3>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <p class="lead text-center">
+                                Batas Waktu Pembayaran <br>
+                                <span class="text-danger" id="limit"></span> <br>
+                                <small>Segera lakukan pembayaran sebelum waktu habis.</small>
+                            </p>
+
+                            <h1 class="text-center mb-5" id="clock"></h1>
+
+                            <p class="mb-0">
+                                Anda dapat melakukan pembayaran dengan cara sebagai berikut:
+                            </p>
+                        </div>
+
+                        <ul id="how-to-pay" class="accordion list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="#atm-bni" class="text-decoration-none stretched-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="atm-bni">Cara transfer ke sesama Bank Mandiri lewat Livin
+                                </a>
+                            </li>
+                            <div id="atm-bni" class="card-body collapse" aria-labelledby="atm-bni" data-parent="#how-to-pay">
+                                <ol>
+                                    <li>Login di aplikasi Livin By Mandiri</li>
+                                    <li>Login Mandiri Online dengan Username dan Password</li>
+                                    <li>Pilih Transfer</li>
+                                    <li>Tap di menu transfer</li>
+                                    <li>Pilih rekening mandiri</li>
+                                    <li>Masukan nomor rekening di atas "1380022095942"</li>
+                                    <li>Isi rekening Tujuan dan jumlah transfer</li>
+                                    <li>klik konfirmasi</li>
+                                    <li>Masukkan MPIN mandiri</li>
+                                    <li>Klik kirim dan masukkan MPIN</li>
+                                </ol>
+                            </div>
+
+                            <li class="list-group-item">
+                                <a href="#mobile-banking-bni" class="text-decoration-none stretched-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="mobile-banking-bni">Cara transfer ke sesam Bank Mandiri Lewat ATM</a>
+                            </li>
+                            <div id="mobile-banking-bni" class="card-body collapse" aria-labelledby="mobile-banking-bni" data-parent="#how-to-pay">
+                                <ol>
+                                    <li>Datang Kemesin ATM Mandiri</li>
+                                    <li>Masukkan kartu ATM Mandiri ke mesin ATM</li>
+                                    <li>Pilih Menu bahasa lalu masukkan 6 digit PIN atm</li>
+                                    <li>Pilih menu transaksi lainya</li>
+                                    <li>Pilih menu transfer</li>
+                                    <li>Pilih Rekening Mandiri</li>
+                                    <li>Masukkan nomor rekening "1380022095942"</li>
+                                    <li>Masukkan jumlah nominal transfer Bank Mandiri</li>
+                                    <li>PIlih benar</li>
+                                    <li>Klik YA pada halamn konfirmasi</li>
+                                </ol>
+                            </div>
+
+                            <!-- iBank Personal -->
+                            <li class="list-group-item">
+                                <a href="#ibank-personal" class="text-decoration-none stretched-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="ibank-personal">Cara transfer kesesama Bank Mandiri lewat Internet Banking</a>
+                            </li>
+                            <div id="ibank-personal" class="card-body collapse" aria-labelledby="ibank-personal" data-parent="#how-to-pay">
+                                <ol>
+                                    <li>Buka <a href="https://bankmandiri.co.id/en/web/guest/layanan-echannel-ebanking">bankmandiri.co.id</a> pada browser</li>
+                                    <li>masukkan user id dan password</li>
+                                    <li>Pilih menu Transfer</li>
+                                    <li>Pilih rekening mandiri</li>
+                                    <li>pilih rekening asal, nominal, dan masukkan nomor rekening "1380022095942"</li>
+                                    <li>kilk lanjutkan</li>
+                                    <li>Aktifkan token dan pin token mandiri</li>
+                                    <li>klik angka 1 untuk masuk ke mode apply 1</li>
+                                    <li>Masukkan kode challange 8 digit ke token mandiri</li>
+                                    <li>Tunggu sampai muncul kode baru</li>
+                                    <li>Masukkan kode pada token ke kolom Masukkan PIN Mandiri</li>
+                                    <li>Pilih tombol lanjutkan</li>
+                                    <li>Tunggu Prosses transfer Bank Mandiri Berhasil</li>
+                                </ol>
+                            </div>
+
+                            <!-- Cabang atau Teller BNI -->
+                                <li class="list-group-item">
+                                    <a href="#atm-bank-lain" class="text-decoration-none stretched-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="atm-bank-lain">Melalui SMS Banking</a>
+                                </li>
+                                <div id="atm-bank-lain" class="card-body collapse" aria-labelledby="atm-bank-lain" data-parent="#how-to-pay">
+                                <ol>
+                                    <li>Aktifkan SMS Banking: Pastikan Anda telah mengaktifkan layanan SMS Banking dari Bank Mandiri</li>
+                                    <li>Kirim SMS: Kirim SMS dengan format yang benar, termasuk nomor rekening "1380022095942" tujuan dan jumlah transfer</li>
+                                    <li>Terima SMS Konfirmasi: Anda akan menerima SMS konfirmasi transaksi yang perlu Anda terima</li>
+                            </div>
+                                <li class="list-group-item">
+                                    <a href="#ovo" class="text-decoration-none stretched-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="ovo">Melalui Mobile Banking</a>
+                                </li>
+                                <div id="ovo" class="card-body collapse" aria-labelledby="ovo" data-parent="#how-to-pay">
+                                <ol>
+                                    <li>Unduh Aplikasi Mobile Banking: Unduh dan instal aplikasi mobile banking Bank Mandiri pada ponsel Anda</li>
+                                    <li>Login ke Aplikasi: Login ke akun mobile banking Anda dengan ID pengguna dan kata sandi</li>
+                                    <li>Pilih Menu Transfer: Pilih menu "Transfer" atau "Transfer Antar Bank"</li>
+                                    <li>Masukkan Rekening Tujuan: Masukkan nomor rekening bank tujuan "1380022095942" dan jumlah uang yang akan Anda transfer</li>
+                                    <li>Verifikasi dan Konfirmasi: Verifikasi informasi transaksi dan konfirmasikan transfer</li>
+                                </ol>
+                            </div>
+
+
+                </div>
+                <div class="col-md-5">
+                    <h5>Detail Pembayaran</h5>
+                    <div class="callout callout-info bg-light py-1 border-top-0 border-right-0 border-bottom-0">
+                        <p class="lead">Total</p>
+                        <p class="lead mb-0">
+                            <small class="align-top text-secondary">Rp</small><?php echo $product['amount']; ?>
+                        </p>
+                        <small>
+                            <span class="text-secondary">Total: </span>
+                            <em>Minimal sepuluh ribu gan</em>
+                        </small>
+
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <?php endforeach; ?>
+    <script type="text/javascript">
+
+    var limit = new Date().toLocaleString("en-US", {timeZone: "Asia/Jakarta"}).slice(0,10).replace(/\//g,'-') + " 23:59:59";
+    // Set the date we're counting down to
+    var countDownDate = new Date(limit).getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        hours = (hours < 10) ? '0' + hours : hours;
+        document.getElementById("limit").innerHTML = limit;
+        document.getElementById("clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("clock").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/popperjs/dist/umd/popper.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

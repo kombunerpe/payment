@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="tailwindcss-colors.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Payment Page</title>
+</head>
+<body>
+
+    <!-- start: Payment -->
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-wrapper">
+                <div class="payment-left">
+                    <div class="payment-header">
+                        <div class="payment-header-icon"><i class="ri-flashlight-fill"></i></div>
+                        <div class="payment-header-title">Order Summary</div>
+                        <p class="payment-header-description">How To Use A Custom Thank You Page For Order Summary In WooCommerce</p>
+                    </div>
+                    <div class="payment-content">
+                        <div class="payment-body">
+                            <div class="payment-plan">
+                                <div class="payment-plan-type">Pro</div>
+                                <div class="payment-plan-info">
+                                    <div class="payment-plan-info-name">Professional Plan</div>
+                                    <div class="payment-plan-info-price">Bakso & Seblak</div>
+                                </div>
+                                <a href="#" class="payment-plan-change">Change</a>
+                            </div>
+                            <div class="payment-summary">
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Nama</div>
+                                    <div class="payment-summary-price">Bakso & seblak gan</div>
+                                </div>
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Jumlah</div>
+                                    <div class="payment-summary-price">minimum Rp.10.000,00</div>
+                                </div>
+                                <div class="payment-summary-divider"></div>
+                                <div class="payment-summary-item payment-summary-total">
+                                    <div class="payment-summary-name">Total</div>
+                                    <div class="payment-summary-price">BEBAS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-right">
+                    <form id="payment-form" action="#" method="POST" class="payment-form">
+                        <h1 class="payment-title">Payment Details</h1>
+                        <div class="payment-method">
+<!--                             <input type="radio" name="payment-method" id="method-1" value="DANA" checked>
+                            <label for="method-1" class="payment-method-item">
+                                <img src="images/DANA-scaled-removebg-preview.png" alt="DANA">
+                            </label> -->
+                            <input type="radio" name="payment-method" id="method-2" value="BRI">
+                            <label for="method-2" class="payment-method-item">
+                                <img src="images/bria001_bri.png" alt="BRI">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-3" value="Mandiri">
+                            <label for="method-3" class="payment-method-item">
+                                <img src="images/bank-mandiri-logo.png" alt="Mandiri">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-4" value="BCA">
+                            <label for="method-4" class="payment-method-item">
+                                <img src="images/BCA-removebg-preview.png" alt="BCA">
+                            </label>
+<!--                             <input type="radio" name="payment-method" id="method-5" value="Allo Bank">
+                            <label for="method-5" class="payment-method-item">
+                                <img src="images/allo.png" alt="Allo Bank">
+                            </label> -->
+                        </div>
+
+                        <div class="payment-form-group">
+                            PILIH BANK ANDA    
+                        </div>
+
+                        <button type="submit" id="pay-button" class="payment-form-submit-button">Pay</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: Payment -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('payment-form').addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent the default form submission
+
+            const paymentMethod = document.querySelector('input[name="payment-method"]:checked');
+            const productId = 1; // Replace this with the actual product ID if needed
+
+            let redirectUrl = `checkout.php?id=${productId}`;
+            if (paymentMethod) {
+                switch (paymentMethod.value) {
+                    case 'DANA':
+                        redirectUrl = '../QR/index.html';
+                        break;
+                    case 'BRI':
+                    redirectUrl = '../QR/brikgasdjhfdsjyhrweiohnfljkwehnohnefnlwenf.html';
+                    break;
+                    case 'Mandiri':
+                    redirectUrl = '../QR/mandirijepgtoiewjtgpowejtpogfwej[okgkdwlg.html';
+                    break;
+                    case 'BCA':
+                    redirectUrl = '../QR/bcasdjlhweiofhkslefjweiofhnlwkefjwiejnifjwemnf.html';
+                    break;
+                    case 'Allo Bank':
+                    redirectUrl = '../QR/allo.html';
+                    break;
+                        redirectUrl = ''; // Define appropriate redirect URLs here if needed
+                        break;
+                }
+            }
+            window.location.href = redirectUrl; // Redirect to the appropriate URL
+        });
+    });
+</script>
+</body>
+</html>
