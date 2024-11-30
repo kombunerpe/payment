@@ -17,14 +17,14 @@
                             window.location.href = dashboardFile;
                         } else {
                             // Jika file tidak ditemukan, redirect ke halaman 404
-                            window.location.href = './payment-master/index.html'; // Ganti dengan halaman 404 Anda
+                            window.location.href = '#'; // Ganti dengan halaman 404 Anda
                         }
                     }, 1000); // Delay selama 1000 milidetik (1 detik)
                 })
                 .catch(() => {
                     // Jika terjadi error, redirect ke halaman 404
                     setTimeout(() => {
-                        window.location.href = './payment-master/index.html'; // Ganti dengan halaman 404 Anda
+                        window.location.href = '#'; // Ganti dengan halaman 404 Anda
                     }, 1000);
                 });
         }
