@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     redirectUrl = '../qr/nicehash.html';
                     break;
                 case 'allo-bank':
-                    redirectUrl = '../qr/tokocrp.html';
+                    redirectUrl = '../qr/allo.html';
                     break;
             }
         }
