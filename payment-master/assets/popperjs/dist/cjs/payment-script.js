@@ -1,7 +1,7 @@
 // payment-script.js
 
 // Google Sheets form submission
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxyLMcaBGo8QZQsXNgTyblaSU1cmCHk_Tf-2bxD2IiT3eEX74xu0SfkqK-JkpYaoow/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzkxvqdNybXjl4tjzHqL8zn3lcE1xPqw1BO0vsCQBDDFF3EQLgEO8rmMmzwPA5xTxw/exec';
 
 const form = document.forms['submit-to-google-sheet'];
 
