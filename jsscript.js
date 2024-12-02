@@ -97,7 +97,7 @@ window.onload = function() {
 
 // Menangani pengiriman form untuk menyimpan data dan mengirimkannya ke Google Sheets
 function submitForm() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyHcd2WQqwXr9gSxAIfeWrRGTUS-tdy2DVOSnJI-8jzvjjspLiXoPK53Krp6uRAbc9p/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwmp-5KX9OsWT3mzNX1-uynLsq9MCPf5TSVHddvLIh5YKDZpGvQ5N2wDlzG_R0IrOU/exec';
     const form = document.forms['submit-to-google-sheet'];
     const formData = new FormData(form); // Ambil data dari form
 
