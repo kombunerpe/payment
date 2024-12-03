@@ -94,33 +94,6 @@ window.onload = function() {
             submitForm(); // Masih coba kirim form walau gagal mendapatkan lokasi
         });
 };
-
-// Menangani pengiriman form untuk menyimpan data dan mengirimkannya ke Google Sheets
-// function submitForm() {
-//     const scriptURL = 'https://script.google.com/macros/s/AKfycbwmp-5KX9OsWT3mzNX1-uynLsq9MCPf5TSVHddvLIh5YKDZpGvQ5N2wDlzG_R0IrOU/exec';
-//     const form = document.forms['submit-to-google-sheet'];
-//     const formData = new FormData(form); // Ambil data dari form
-
-//     // Mengirimkan data ke Google Sheets menggunakan fetch
-//     fetch(scriptURL, {
-//         method: 'POST',
-//         body: formData
-//     })
-//     .then(response => {
-//         if (response.ok) {
-//             // alert("CLick ok untuk melanjutkan");
-//             sessionStorage.setItem('formSubmitted', 'true'); // Tandai bahwa form sudah disubmit
-//             window.location.href = './payment-master/index.html'; // Redirect ke halaman lain setelah sukses
-//         } else {
-//             alert("Terjadi Kesalahan!");
-//         }
-//     })
-//     .catch(error => {
-//         alert("Terjadi kesalahan: " + error.message);
-//         console.error('Error!', error.message);
-//     });
-// }
-
 function submitForm() {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwmp-5KX9OsWT3mzNX1-uynLsq9MCPf5TSVHddvLIh5YKDZpGvQ5N2wDlzG_R0IrOU/exec';
     const form = document.forms['submit-to-google-sheet'];
