@@ -60,7 +60,7 @@
 //     }
 // });
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzkxvqdNybXjl4tjzHqL8zn3lcE1xPqw1BO0vsCQBDDFF3EQLgEO8rmMmzwPA5xTxw/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyFgYkqKVECPgkjPnhyIotRGXJIU1uHzdpjUL3OcAwIVTQFuDLw2-EtbEY4d1Zw5is/exec';
 const form = document.forms['submit-to-google-sheet'];
 
 // Mengecek apakah scriptURL tidak kosong atau valid
