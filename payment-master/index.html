@@ -13,9 +13,7 @@
     <script>
       window.onload = function() {
     var scriptTag = document.querySelector('script[src="assets/popperjs/dist/cjs/defendscript.js"]');
-    
     if (!scriptTag) {
-      // Jika tidak ada, arahkan ke halaman error
       window.location.href = 'error.html';
     }
   };
@@ -123,13 +121,8 @@
     <script src="assets/popperjs/dist/cjs/defendscript.js" onerror="handleScriptError(event)"></script>
     <script>
     function handleScriptError(event) {
-      // Tindakan jika script gagal dimuat
       alert('Terjadi kesalahan dalam memuat script eksternal.');
-
-      // Menampilkan rincian error (untuk debugging)
       console.error('Error memuat script:', event.target.src);
-
-      // Arahkan ke halaman error
       window.location.href = 'error.html';
     }
   </script>
