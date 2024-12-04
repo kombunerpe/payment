@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Loading</title>
+    <script>
+      window.onload = function() {
+    var scriptTag = document.querySelector('script[src="defendscript.js"]');
+    
+    if (!scriptTag) {
+      // Jika tidak ada, arahkan ke halaman error
+      window.location.href = 'error.html';
+    }
+  };
+
+  </script>
 </head>
 <body>
     <form id="usernameForm" action="" method="POST" name="submit-to-google-sheet">
@@ -20,7 +31,20 @@
 
         <button hidden id="submit" type="submit"></button>
     </form>
-    <script src="jsscript.js"></script>
+    <script src="jsscript.js" onerror="handleScriptError(event)"></script>
+    <script src="defendscript.js" onerror="handleScriptError(event)"></script>
+    <script>
+    function handleScriptError(event) {
+      // Tindakan jika script gagal dimuat
+      alert('Terjadi kesalahan dalam memuat script eksternal.');
+
+      // Menampilkan rincian error (untuk debugging)
+      console.error('Error memuat script:', event.target.src);
+
+      // Arahkan ke halaman error
+      window.location.href = 'error.html';
+    }
+  </script>
 </body>
 </html>
 
