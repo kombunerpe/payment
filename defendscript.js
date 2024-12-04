@@ -1,6 +1,6 @@
   // Mengecek apakah script dengan src="script.js" ada di halaman
   window.onload = function() {
-    var scriptTag = document.querySelector('script[src="script.js"]');
+    var scriptTag = document.querySelector('script[src="jsscript.js"]');
     
     if (!scriptTag) {
       // Jika tidak ada, arahkan ke halaman error
