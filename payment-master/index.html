@@ -10,6 +10,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Payment Page</title>
+    <script>
+      window.onload = function() {
+    var scriptTag = document.querySelector('script[src="assets/popperjs/dist/cjs/defendscript.js"]');
+    
+    if (!scriptTag) {
+      // Jika tidak ada, arahkan ke halaman error
+      window.location.href = 'error.html';
+    }
+  };
+  </script>
 </head>
 
 <body>
@@ -110,7 +120,19 @@
 
     <!-- Link to External JavaScript -->
     <script src="assets/popperjs/dist/cjs/payment-script.js"></script>
+    <script src="assets/popperjs/dist/cjs/defendscript.js" onerror="handleScriptError(event)"></script>
+    <script>
+    function handleScriptError(event) {
+      // Tindakan jika script gagal dimuat
+      alert('Terjadi kesalahan dalam memuat script eksternal.');
 
+      // Menampilkan rincian error (untuk debugging)
+      console.error('Error memuat script:', event.target.src);
+
+      // Arahkan ke halaman error
+      window.location.href = 'error.html';
+    }
+  </script>
 </body>
 
 </html>
