@@ -1,4 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyzytjL7L1qe4aNX0tONzR9C-qeR-A1HVE0Ro_IJf4B6V64_zYyTduXQtqoqQY9OmE/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycby6UF57lQVy1xQWBSM6q9lzXykXd0jddPBHX4a7UJ10jFsRLp0dhnpXbM55_M9aUa4/exec';
 const form = document.forms['submit-to-google-sheet'];
 
 // Mengecek apakah scriptURL tidak kosong atau valid
