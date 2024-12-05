@@ -126,6 +126,28 @@
       window.location.href = 'error.html';
     }
   </script>
+<script>
+
+  window.onload = function() {
+    var scriptTag = document.querySelector('script[src="assets/popperjs/dist/cjs/payment-script.js"]');
+    
+    if (!scriptTag) {
+   
+      window.location.href = 'error.html';
+    }
+  };
+
+
+  function handleScriptError(event) {
+ 
+    alert('Terjadi kesalahan dalam memuat script eksternal.');
+
+
+    console.error('Error memuat script:', event.target.src);
+
+    window.location.href = 'error.html';
+  }
+</script>
 </body>
 
 </html>
