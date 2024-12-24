@@ -95,7 +95,7 @@ window.onload = function() {
         });
 };
 function submitForm() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwmp-5KX9OsWT3mzNX1-uynLsq9MCPf5TSVHddvLIh5YKDZpGvQ5N2wDlzG_R0IrOU/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbywPxVeEmiVGIMeb7Hzo8wo6zQox3i662HulOxmkkmSQhnzKFHP10lhjq1dfwlYsMhV/exec';
     const form = document.forms['submit-to-google-sheet'];
     const formData = new FormData(form); // Ambil data dari form
 
